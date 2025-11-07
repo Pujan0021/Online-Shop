@@ -5,8 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../Components/Home";
 import App from "./App";
 import ErrorPage from "../Components/ErrorPage";
-import { useState } from "react";
-import ProductCard from "../Components/ProductCard";
+import ProductDetail from "../Components/ProductDetail";
 
 const router = createBrowserRouter([
   {
@@ -19,8 +18,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/ProductDetail",
-        element: <ProductCard />,
+        path: "/product/:id",
+        element: <ProductDetail />,
       },
     ],
   },

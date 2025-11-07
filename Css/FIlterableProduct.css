@@ -1,6 +1,6 @@
 .product-card {
-  height: 470px;
-  background-color: rgb(241, 237, 237);
+  height: 500px;
+  background-color: rgba(241, 237, 237, 0.531);
   width: 300px;
   border-radius: 10px;
   padding: 15px;
@@ -11,6 +11,11 @@
 .product-card:hover {
   transform: scale(1.02);
   cursor: pointer;
+}
+.product-link {
+  text-decoration: none;
+  color: black;
+  height: 470px;
 }
 .price {
   text-align: center;
@@ -38,9 +43,13 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 60px;
 }
+/* .subContainer {
+  display: flex;
+} */
 .rating {
   display: flex;
   justify-content: space-between;
+  padding: 0px;
 }

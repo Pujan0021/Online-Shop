@@ -1,4 +1,4 @@
-import "../Css/ProductCard.css";
+import "../Css/ProductDetail.css";
 import { apiData } from "./API/api";
 import { useState, useEffect } from "react";
 import NavBar from "./NavBar";
@@ -23,7 +23,7 @@ const Home = () => {
     };
     fetchData();
   }, []);
-
+  console.log(product);
   return (
     <>
       {loading ? (
