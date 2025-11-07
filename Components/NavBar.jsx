@@ -1,7 +1,11 @@
 import SearchBar from "./SearchBar";
 import "../Css/SearchBar.css";
 import "../Css/NavBar.css";
-const NavBar = ({ onSearch, query }) => {
+const NavBar = ({ query, setQuery }) => {
+  const handleSearch = (value) => {
+    setQuery(value);
+  };
+
   return (
     <div>
       <ul className="navBar">
@@ -9,7 +13,7 @@ const NavBar = ({ onSearch, query }) => {
           <a href="">Home</a>
         </li>
         <li>
-          <SearchBar onSearch={query} />
+          <SearchBar onSearch={handleSearch} />
         </li>
         <li>
           <a href="">Contact</a>

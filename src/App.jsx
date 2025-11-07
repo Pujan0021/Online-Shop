@@ -1,9 +1,9 @@
 import NavBar from "../Components/NavBar";
 import { Outlet } from "react-router-dom";
-const App = ({ onSearch }) => {
+const App = ({ query }) => {
   return (
     <>
-      <NavBar />
+      <NavBar onSearch={query} />
       <Outlet />
     </>
   );

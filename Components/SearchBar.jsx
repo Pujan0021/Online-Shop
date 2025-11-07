@@ -1,9 +1,9 @@
 import { useState } from "react";
 const SearchBar = ({ onSearch }) => {
-  const [query, setQuery] = useState("");
+  const [inputValue, setInputValue] = useState("");
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      onSearch(setQuery);
+      onSearch(inputValue);
     }
   };
 
@@ -13,13 +13,13 @@ const SearchBar = ({ onSearch }) => {
         className="searchBox"
         type="text"
         placeholder="Search Product .."
-        value={query}
+        value={inputValue}
         onKeyDown={handleKeyDown}
         onChange={(e) => {
-          setQuery(e.target.value);
+          setInputValue(e.target.value);
         }}
       />
-      <button onClick={() => onSearch(setQuery)} className="searchBtn">
+      <button onClick={() => onSearch(inputValue)} className="searchBtn">
         Search
       </button>
     </div>

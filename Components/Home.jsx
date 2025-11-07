@@ -23,7 +23,7 @@ const Home = () => {
     };
     fetchData();
   }, []);
-  console.log(product);
+
   return (
     <>
       {loading ? (
